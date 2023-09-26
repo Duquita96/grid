@@ -1,0 +1,30 @@
+body {
+    background-color: #ffc2c7;
+}
+
+.container {
+    /*grid*/
+    display: grid;
+    /* Defines the widths of our 3 columns*/
+    grid-template-columns: 100px repeat(2, 1fr);
+
+    /* defines the height of rows */
+    grid-template-rows: 40vh 2.5em;
+
+    /* Same as column-gap:1em; row-gap:1em; */
+    gap: 1em;
+
+    /* Define the height of extra row */
+    grid-auto-rows: minmax(30px, auto);
+
+}
+
+.item {
+    background-color: #b6e5d8;
+    padding: 9px;
+}
+
+/* Zebra striping */
+.item:nth-of-type(even){
+background: red;
+}
